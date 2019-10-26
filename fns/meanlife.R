@@ -6,6 +6,13 @@ COMP_simpsons_rule<- function(f,a,b,n)
   I= h/3*(f(xi[1])+2*sum(f(aa))+4*sum(f(bb))+f(xi[length(xi)]));
   return(I)
 }
+##mean residual lifetime estimation function,
+##Arguments 
+## s methods choices,  'new', 'mle', 'HQ'
+## t time
+## a left truncation time
+## y survival time
+## id 1
 meanlife <-function(s,t,a,y,id)
 { 
   g <- get(paste0('S.',s))
